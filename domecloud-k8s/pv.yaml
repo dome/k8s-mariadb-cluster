@@ -1,0 +1,29 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: maria-pv-0
+  labels:
+    pvclabel: maria-local
+    type: local
+spec:
+  capacity:
+    storage: 150Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/mariadb-cluster"
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: maria-pv-1
+  labels:
+    pvclabel: maria-local
+    type: local
+spec:
+  capacity:
+    storage: 150Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/mariadb-cluster"
